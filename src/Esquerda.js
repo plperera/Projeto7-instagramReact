@@ -2,27 +2,45 @@ import Story from "./Story"
 import Post from "./Post"
 function Esquerda() {
     
+    const arrayStory = [
+
+        {image: "assets/img/9gag.svg", user: "9gag"},
+        {image: "assets/img/meowed.svg", user: "meowed"},
+        {image: "assets/img/barked.svg", user: "barked"},
+        {image: "assets/img/nathanwpylestrangeplanet.svg", user: "nathanwpylestrangeplanet"},
+        {image: "assets/img/wawawicomics.svg", user: "wawawicomics"},
+        {image: "assets/img/respondeai.svg", user: "respondeai"},
+        {image: "assets/img/filomoderna.svg", user: "filomoderna"},
+        {image: "assets/img/memeriagourmet.svg", user: "memeriagourmet"}
+
+    ]
+
+    const arrayPost = [
+        {
+            imageUser: "assets/img/meowed.svg",
+            user: "meowed",
+            imagePost: "assets/img/gato-telefone.svg",
+            imageLike: "assets/img/respondeai.svg",
+            userLike: "respondeai",
+            likeAmount: "101.523" 
+        },
+        {
+            imageUser: "assets/img/barked.svg",
+            user: "barked",
+            imagePost: "assets/img/dog.svg",
+            imageLike: "assets/img/adorable_animals.svg",
+            userLike: "adorable_animals",
+            likeAmount: "99.159" 
+            }
+
+    ]
     return (
 
         <div class="esquerda">
 
             <div class="stories">
 
-                <Story image = "assets/img/9gag.svg" user = "9gag"/>
-
-                <Story image = "assets/img/meowed.svg" user = "meowed"/>
-
-                <Story image = "assets/img/barked.svg" user = "barked"/>
-
-                <Story image = "assets/img/nathanwpylestrangeplanet.svg" user = "nathanwpylestrangeplanet"/>
-
-                <Story image = "assets/img/wawawicomics.svg" user = "wawawicomics"/>
-
-                <Story image = "assets/img/respondeai.svg" user = "respondeai"/>
-
-                <Story image = "assets/img/filomoderna.svg" user = "filomoderna"/>
-
-                <Story image = "assets/img/memeriagourmet.svg" user = "memeriagourmet"/>
+                {arrayStory.map(arrayStory => <Story image = {arrayStory.image} user = {arrayStory.user} /> ) }
 
                 <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
@@ -30,27 +48,18 @@ function Esquerda() {
                 
             </div>
 
-        <div class="posts">
+            <div class="posts">
 
-            <Post 
-            imageUser = "assets/img/meowed.svg"
-            user = "meowed"
-            imagePost = "assets/img/gato-telefone.svg"
-            imageLike = "assets/img/respondeai.svg"
-            userLike = "respondeai"
-            likeAmount = "101.523"
-            />
+                {arrayPost.map(arrayPost => <Post 
+                imageUser = {arrayPost.imageUser}
+                user = {arrayPost.user}
+                imagePost = {arrayPost.imagePost}
+                imageLike = {arrayPost.imageLike}
+                userLike = {arrayPost.userLike}
+                likeAmount = {arrayPost.likeAmount}
+                />)}
 
-            <Post 
-            imageUser = "assets/img/barked.svg"
-            user = "barked"
-            imagePost = "assets/img/dog.svg"
-            imageLike = "assets/img/adorable_animals.svg"
-            userLike = "adorable_animals"
-            likeAmount = "99.159"
-            />
-
-        </div>
+            </div>
 
         </div>
 
