@@ -1,14 +1,5 @@
 function Post (props) {
 
-    //entradas :
-
-    //imageUser: assets/img/meowed.svg
-    //user: meowed
-    //imagePost: assets/img/gato-telefone.svg
-    //imageLike: assets/img/respondeai.svg
-    //userLike: respondeai
-    //likeAmount: 101.523
-
     return (
         <div class="post">
 

@@ -1,14 +1,15 @@
 import Sugestao from "./Sugestao";
-function SideBar () {
+function SideBar (props) {
 
-
+    const arrayUser = props.arrayUser
+    console.log (arrayUser)
     return (
         <div class="sidebar">
             <div class="usuario">
-                <img src="assets/img/catanacomics.svg" />
+                <img src={arrayUser[0].image}/>
                 <div class="texto">
-                <strong>catanacomics</strong>
-                Catana
+                <strong>{arrayUser[0].user}</strong>
+                {arrayUser[0].name}
                 </div>
             </div>
 
@@ -18,36 +19,8 @@ function SideBar () {
                     <div>Ver tudo</div>
                 </div>
 
-                <Sugestao 
-                    image = "assets/img/bad.vibes.memes.svg"
-                    user = "bad.vibes.memes"
-                    followYou = "True"
-                />
-
-                <Sugestao 
-                    image = "assets/img/chibirdart.svg"
-                    user = "chibirdart"
-                    followYou = "True"
-                />
-                
-                <Sugestao 
-                    image = "assets/img/razoesparaacreditar.svg"
-                    user = "razoesparaacreditar"
-                    followYou = "False"
-                />
-   
-                <Sugestao 
-                    image = "assets/img/adorable_animals.svg"
-                    user = "adorable_animals"
-                    followYou = "True"
-                />
-
-                <Sugestao 
-                    image = "assets/img/smallcutecats.svg"
-                    user = "smallcutecats"
-                    followYou = "True"
-                />
-
+                {props.arraySugestoes.map(arraySugestoes => <Sugestao image = {arraySugestoes.image} user = {arraySugestoes.user} followYou = {arraySugestoes.followYou} />)}
+               
             </div>
 
             <div class="links">

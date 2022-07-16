@@ -1,10 +1,5 @@
 function Story (props) {
 
-    //entradas :
-
-    //image: assets/img/9gag.svg
-    //user: 9gag
-
     return(
 
         <div class="story">
