@@ -1,3 +1,4 @@
+import Sugestao from "./Sugestao";
 function SideBar () {
 
 
@@ -13,69 +14,40 @@ function SideBar () {
 
             <div class="sugestoes">
                 <div class="titulo">
-                Sugestões para você
-                <div>Ver tudo</div>
+                    Sugestões para você
+                    <div>Ver tudo</div>
                 </div>
 
-                <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/bad.vibes.memes.svg" />
-                    <div class="texto">
-                    <div class="nome">bad.vibes.memes</div>
-                    <div class="razao">Segue você</div>
-                    </div>
-                </div>
+                <Sugestao 
+                    image = "assets/img/bad.vibes.memes.svg"
+                    user = "bad.vibes.memes"
+                    followYou = "True"
+                />
 
-                <div class="seguir">Seguir</div>
-                </div>
+                <Sugestao 
+                    image = "assets/img/chibirdart.svg"
+                    user = "chibirdart"
+                    followYou = "True"
+                />
+                
+                <Sugestao 
+                    image = "assets/img/razoesparaacreditar.svg"
+                    user = "razoesparaacreditar"
+                    followYou = "False"
+                />
+   
+                <Sugestao 
+                    image = "assets/img/adorable_animals.svg"
+                    user = "adorable_animals"
+                    followYou = "True"
+                />
 
-                <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/chibirdart.svg" />
-                    <div class="texto">
-                    <div class="nome">chibirdart</div>
-                    <div class="razao">Segue você</div>
-                    </div>
-                </div>
+                <Sugestao 
+                    image = "assets/img/smallcutecats.svg"
+                    user = "smallcutecats"
+                    followYou = "True"
+                />
 
-                <div class="seguir">Seguir</div>
-                </div>
-
-                <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/razoesparaacreditar.svg" />
-                    <div class="texto">
-                    <div class="nome">razoesparaacreditar</div>
-                    <div class="razao">Novo no Instagram</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-                </div>
-
-                <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/adorable_animals.svg" />
-                    <div class="texto">
-                    <div class="nome">adorable_animals</div>
-                    <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-                </div>
-
-                <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/smallcutecats.svg" />
-                    <div class="texto">
-                    <div class="nome">smallcutecats</div>
-                    <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-                </div>
             </div>
 
             <div class="links">
