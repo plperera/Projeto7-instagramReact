@@ -22,7 +22,7 @@ function Conteudo() {
             imagePost: "assets/img/gato-telefone.svg",
             imageLike: "assets/img/respondeai.svg",
             userLike: "respondeai",
-            likeAmount: "101.523" 
+            likeAmount: 523
         },
         {
             imageUser: "assets/img/barked.svg",
@@ -30,7 +30,7 @@ function Conteudo() {
             imagePost: "assets/img/dog.svg",
             imageLike: "assets/img/adorable_animals.svg",
             userLike: "adorable_animals",
-            likeAmount: "99.159" 
+            likeAmount: 159
             }
     ]
 
@@ -63,20 +63,20 @@ function Conteudo() {
     ]
 
     //USUARIO QUE ESTA LOGADO
-    const arrayUser = [ 
+    const objUser = 
         {   
             image: "assets/img/plperera.jpg",
             user: "plperera",
             name: "Pedro Pereira"
     
         }
-    ]
+
     return (
         <div class="corpo">
 
             <Esquerda arrayPost = {arrayPost} arrayStory = {arrayStory} />
             
-            <SideBar arraySugestoes = {arraySugestoes} arrayUser = {arrayUser}/>
+            <SideBar arraySugestoes = {arraySugestoes} objUser = {objUser}/>
 
         </div>
     )

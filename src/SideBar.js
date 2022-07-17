@@ -1,15 +1,13 @@
 import Sugestao from "./Sugestao";
 function SideBar (props) {
 
-    const arrayUser = props.arrayUser
-    console.log (arrayUser)
     return (
         <div class="sidebar">
             <div class="usuario">
-                <img src={arrayUser[0].image}/>
+                <img src={props.objUser.image}/>
                 <div class="texto">
-                <strong>{arrayUser[0].user}</strong>
-                {arrayUser[0].name}
+                <strong>{props.objUser.user}</strong>
+                {props.objUser.name}
                 </div>
             </div>
 

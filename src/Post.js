@@ -1,4 +1,25 @@
+import React from "react"
+
+let likeClass = ""
+let likeIcon = "heart-outline"
+
 function Post (props) {
+
+    function like () {
+        
+        console.log(likeAmount)
+
+        likeClass = (likeAmount !== props.likeAmount ? "coracaoVazio":"coracaoCheio")
+        likeIcon = (likeAmount !== props.likeAmount ? "heart-outline":"heart")
+
+        likeAmount === props.likeAmount ? setLikeAmount ( likeAmount + 1) : setLikeAmount ( likeAmount - 1)
+        console.log(likeAmount)
+        
+    }
+
+    const [likeAmount, setLikeAmount] = React.useState(props.likeAmount)
+
+
 
     return (
         <div class="post">
@@ -29,7 +50,14 @@ function Post (props) {
                 <div class="acoes">
                     
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon 
+
+                        class={likeClass} 
+                        name={likeIcon} 
+                        onClick={like}>
+
+                        </ion-icon>
+
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
@@ -45,7 +73,7 @@ function Post (props) {
                     <img src={props.imageLike}/>
 
                     <div class="texto">
-                        Curtido por <strong> {props.userLike} </strong> e <strong>outras {props.likeAmount} pessoas </strong>
+                        Curtido por <strong> {props.userLike} </strong> e <strong>outras {likeAmount} pessoas </strong>
                     </div>
 
                 </div>

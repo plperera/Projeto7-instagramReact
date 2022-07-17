@@ -10,7 +10,13 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
-
+.coracaoCheio{
+  color: #F35369;
+  
+}
+.coracaoCheio, .coracaoVazio{
+  visibility: visible;
+}
 .navbar {
   width: 100%;
   display: flex;
