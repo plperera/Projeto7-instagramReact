@@ -1,4 +1,4 @@
-# we-pass-front
+# instagram-react
 
 Clone Front-end do Instagram
 
